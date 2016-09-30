@@ -8,12 +8,6 @@ advixe-gui
 
 Memory Access Optimization
 
-Padding
-```
-icc padd.c -o padd
-./padd
-```
-
 Different strides on the same code
 
 ```
@@ -66,16 +60,16 @@ LOOP END
 auto-vectorization
 
 ```
-icc autovec.c -o autovec -vec-report=6
+icc autovec.c -o autovec -vec-report=5
 cat autovec.optrpt
 
-icc autovec.c -o autovec -vec-report=6 -O3
+icc autovec.c -o autovec -vec-report=5 -O3
 cat autovec.optrpt
 
-icc autovec.c -o autovec -vec-report=6 -g -O3
+icc autovec.c -o autovec -vec-report=5 -g -O3
 cat autovec.optrpt
 
-icc autovec.c -o autovec -vec-report=6 -g -O3 -xhost
+icc autovec.c -o autovec -vec-report=5 -g -O3 -xhost
 cat autovec.optrpt
 ```
 

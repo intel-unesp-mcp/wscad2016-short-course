@@ -71,6 +71,9 @@ cat autovec.optrpt
 
 icc autovec.c -o autovec -vec-report=5 -g -O3 -xhost
 cat autovec.optrpt
+
+gcc autovec.c -O3 -o autovecGCC  
+gcc autovec.c -O3 -ftree-vectorizer-verbose=1 -o autovecGCC 
 ```
 
 Examples of loops that do not auto vectorize

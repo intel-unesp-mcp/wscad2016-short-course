@@ -80,6 +80,24 @@ icc novec.c -o novec -vec-report=6 -g -O3
 cat novec.optrpt
 ```
 
+memory aliasing
+```
+icc func.c -c func.o -vec-report=6 -g -O3
+cat func.optrpt
+icc func.c -c func.o -vec-report=6 -g -O3 -fargument-noalias
+cat func.optrpt
+include restrict on quad
+icc func.c -c func.o -vec-report=6 -g -O3 -restrict
+cat func.optrpt
+```
+
+ivdep
+```
+include ivdep on addfloats
+icc func.c -c func.o -vec-report=6 -g -O3 -restrict
+cat func.optrpt
+```
+
 Guided Vectorization
 
 Matrix

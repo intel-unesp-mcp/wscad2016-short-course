@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "matrix.h"
 #include <time.h>
 
 struct coordinate {
@@ -23,8 +22,8 @@ int main(){
   for(j=0; j<10000; j++) {
 
     for(i=0; i<40000; i++) {
-      aosobj[i].x=i + randV;    
-      aosobj[i].y=i*i+ randV;  
+      aosobj[i].x=i + randV;
+      aosobj[i].y=i*i+ randV;
       aosobj[i].z=i+i+ randV;
     }
 

@@ -8,7 +8,7 @@ advixe-gui
 
 Memory Access Optimization
 
-Different strides on the same code
+Different strides on the same code (advisor: coordinate-aos-soa)
 
 ```
 icc stride-test.c -o stride-test -g
@@ -26,7 +26,7 @@ user    0m8.422s
 sys     0m0.001s
 ```
 
-optimization with O3 and vec-report
+optimization with O3 and vec-report 
 
 ```
 icc autoO3.c -o autoO3 -O3 -vec-report6
@@ -57,7 +57,7 @@ LOOP BEGIN at autoO3.c(10,3)
 LOOP END
 ```
 
-auto-vectorization
+auto-vectorization (advisor: auto-vectorization)
 
 ```
 icc autovec.c -o autovec -vec-report=5

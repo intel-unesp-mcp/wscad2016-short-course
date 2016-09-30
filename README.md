@@ -73,7 +73,7 @@ icc autovec.c -o autovec -vec-report=5 -g -O3 -xhost
 cat autovec.optrpt
 ```
 
-loop that do not auto vectorize
+Examples of loops that do not auto vectorize
 
 ```
 icc novec.c -o novec -vec-report=6 -g -O3

@@ -125,10 +125,19 @@ Interpolation
 
 Particle Binning 
 
+```
+change to reference version
+make clean ; make app-CPU
+time ./app-CPU 
+
+change to vectorized version
+make clean ; make app-CPU
+time ./app-CPU 
+```
+
 Diffusion
 
 Lattice Boltzmann
-
 
 
 References

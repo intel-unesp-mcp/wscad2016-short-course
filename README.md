@@ -112,7 +112,7 @@ pragma simd on inner loop
 
 ```
 
-Interpolation
+Interpolation 
 ```
   make clean ; make OMP=no
   cat main.optrpt 
@@ -123,7 +123,7 @@ Interpolation
   time ./main 
 ```
 
-Particle Binning 
+Particle Binning (advisor: particle-binning)
 
 ```
 change to reference version

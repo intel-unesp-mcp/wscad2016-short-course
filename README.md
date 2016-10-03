@@ -112,11 +112,20 @@ pragma simd on inner loop
 
 ```
 
+Interpolation
+```
+  make clean ; make OMP=no
+  cat main.optrpt 
+  time ./main 
+  
+  make clean ; make OMP=no
+  cat main.optrpt 
+  time ./main 
+```
+
 Particle Binning 
 
 Diffusion
-
-Interpolation
 
 Lattice Boltzmann
 

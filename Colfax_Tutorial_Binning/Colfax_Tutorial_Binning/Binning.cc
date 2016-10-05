@@ -555,14 +555,14 @@ int main(int argv, char* argc[]){
   };
 
   void(*BinParticlesImplementation[nImplementations]) ( const InputDataType&, BinsType& ) = {
-    BinParticlesReference,
-    BinParticles_1,
-    BinParticles_2,
-    BinParticles_3,
-    BinParticles_4,
-    BinParticles_5,
-    BinParticles_6,
-    BinParticles_7
+    //BinParticlesReference,
+    //BinParticles_1,
+    //BinParticles_2,
+    //BinParticles_3,
+    BinParticles_4
+    //BinParticles_5,
+    //BinParticles_6,
+    //BinParticles_7
   };
 
   void(*BinParticles) ( const InputDataType&, BinsType& );

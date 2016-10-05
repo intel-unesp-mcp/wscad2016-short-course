@@ -160,17 +160,16 @@ void multiply4(int msize, int tidx, int numt, TYPE a[][NUM], TYPE b[][NUM], TYPE
 
 void multiply0(int msize, int tidx, int numt, TYPE a[][NUM], TYPE b[][NUM], TYPE c[][NUM], TYPE t[][NUM])
 { 
-	int i,j,k;
+  int i,j,k;
 
-// Basic serial implementation
-    for(i=0; i<msize; i++) {
-      for(k=0; k<msize; k++) {
-        #pragma ivdep
-        for(j=0; j<msize; j++) {
-				c[i][j] = c[i][j] + a[i][k] * b[k][j];
-			}
-		}
-	} 
+  for(i=0; i<msize; i++) {
+    for(k=0; k<msize; k++) {
+      #pragma ivdep
+      for(j=0; j<msize; j++) {
+	c[i][j] = c[i][j] + a[i][k] * b[k][j];
+      }
+    }
+  } 
 }
 
 void multiply1(int msize, int tidx, int numt, TYPE a[][NUM], TYPE b[][NUM], TYPE c[][NUM], TYPE t[][NUM])
